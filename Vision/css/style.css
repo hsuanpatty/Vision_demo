@@ -143,7 +143,7 @@ a {
   line-height: 80px;
   border-radius: 99rem;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.3s;
   z-index: 100;
 }
@@ -378,7 +378,7 @@ p {
 /* 按鈕區塊 */
 .btn-bg {
   background: var(--vision);
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 /* banner */
@@ -411,16 +411,10 @@ p {
 /* 新視界假期標題 */
 .tour-title {
   text-align: center;
-  padding: 60px 0 0;
+  padding: 35px 0 0;
 }
 
 .tour-title h1 {
-   /* background: linear-gradient(to top, #7b6841, #c1af88);
-   background: -webkit-linear-gradient(to top,#7b6841, #c1af88);
-   background-clip: text;
-   -webkit-background-clip: text;
-   color: transparent; */
-
    color: var(--gray);
 
    font-size: 38px;
@@ -435,12 +429,6 @@ p {
 }
 
 .sort-title h2{
-   /* background: linear-gradient(to top, #977124, #cca659);
-   background: -webkit-linear-gradient(to top,#977124, #cca659);
-   background-clip: text;
-   -webkit-background-clip: text;
-   color: transparent; */
-
    color: var(--gray3);
 
    font-size: 28px;
