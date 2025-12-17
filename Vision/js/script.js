@@ -27,23 +27,36 @@ console.log(`nav高: ${menuHeight}px`);
 
 // 🔹 Scroll Spy（單一監聽）
 $(window).on('scroll resize reload', function () {
-  if (isClickScrolling) return; // 🚫 點擊動畫中不處理
+  if (isClickScrolling) return;
 
   let scrollTop = $(window).scrollTop();
   let windowH = $(window).height();
 
-  scrollItem.each(function () {
-    let _this = $(this);
-    let scrollItemT = _this.offset().top;
-    let thisIndex = _this.index();
+  // 🔥 滑到最頂：全部熄滅（不亮中西歐）
+  if (scrollTop <= 10) {
+    $('.scroll-tag li').removeClass('on');
+    return;
+  }
 
-    // ✅ 使用畫面中線判斷（不會過早跳）
-    if (scrollItemT <= scrollTop + windowH / 2) {
-      $('.scroll-tag li').removeClass('on');
-      $('.scroll-tag li').eq(thisIndex).addClass('on');
+  let activeIndex = -1;
+
+  scrollItem.each(function (index) {
+    let itemTop = $(this).offset().top;
+
+    // ✅ 使用畫面中線判斷
+    if (itemTop <= scrollTop + windowH / 2) {
+      activeIndex = index;
     }
   });
+
+  if (activeIndex !== -1) {
+    $('.scroll-tag li')
+      .removeClass('on')
+      .eq(activeIndex)
+      .addClass('on');
+  }
 });
+
 
 // 🔹 點擊選單
 $('.scroll-tag').find('li').click(function () {
