@@ -166,7 +166,7 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  padding: 12px 40px 8px;
+  padding: 12px 80px 8px;
   text-align: center;
   background: rgb(255, 255, 255);
 }
@@ -256,7 +256,7 @@ li {
   gap: 10px;
   flex-wrap: wrap; 
 
-  width: 80%;
+  width: 82%;
 }
 
 .menu-height li {
@@ -457,18 +457,31 @@ p {
 
 .pic {
     width: 100%;
+    height: 390px;        /* 固定容器高度 */
+    overflow: hidden;     /* 超出部分隱藏 */
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;    /* 填滿容器並裁切多餘部分 */
+    display: block;
+}
+
+/* .pic {
+    width: 100%;
     background-image: url('your-image.jpg');
-    background-size: cover;       /* 填滿容器 */
-    background-position: center;  /* 置中顯示 */
+    background-size: cover;       
+    background-position: center;  
     position: relative;
 }
 
 .pic img {
     width: 100%;
-    height: auto;       /* 高度自動，不超出容器 */
-    object-fit: contain; /* 讓整張圖片完整顯示 */
+    height: auto;       
+    object-fit: contain;
     display: block;
-}
+} */
 
 .title01 {
     position: absolute;
@@ -499,9 +512,9 @@ p {
    font-family: "微軟正黑體";
    transition: color 0.5s;
    margin: 30px auto 0;
-
+   height: 80px;
    text-align: justify;          /* ⭐ 左右對齊 */
-   letter-spacing: 0;
+   letter-spacing: -0.05rem;
 }
 
 .list_tool:hover .title02 {
@@ -579,10 +592,14 @@ p {
 }
 
 @media (max-width: 1199.98px) {
-    .tour-title h1 {
-        font-size: 32px;
-        letter-spacing: 0;
-    } 
+  .tour-title h1 {
+    font-size: 32px;
+    letter-spacing: 0;
+  }
+
+  .title02 {
+    height: auto;
+  } 
 }
 
 @media (max-width: 767.98px) {
