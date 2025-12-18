@@ -814,7 +814,7 @@ p {
   }
 
   .footer-left a {
-    font-size: 9px;
+    font-size: 14px;
   }
 
   .footer-left p:nth-of-type(1) {
@@ -837,6 +837,10 @@ p {
   }
   .contact-box p {
     margin-bottom: 2px;
+  }
+
+  .footer-left h4 {
+    font-size: 1rem;
   }
 }
 
