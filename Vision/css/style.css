@@ -6,7 +6,6 @@
 *, *::before, *::after {
   box-sizing: border-box; /* 全局 border-box 防止出框 */
   margin: 0;
-  transition: 0.3s;
 }
 
 :root {
@@ -93,7 +92,10 @@ a {
 .w-85 { width: 85% !important; }
 .w-90 { width: 90% !important; }
 .w-100 { width: 100%; }
-.vw-100 { width: 100vw; }
+.vw-100 {   
+  width: 100%;
+  max-width: 100%; 
+}
 
 .d-block { display: block !important; }
 .d-flex { display: flex !important; }
@@ -385,25 +387,17 @@ p {
 .banner {
   width: 100%;
   overflow: hidden;
-  margin: 0;
-  padding: 0;
 }
 
-.banner .banner-img {
-  display: flex;     
-  margin: 0;
-  padding: 0;
+.banner-img > div {
+  width: 100%;
+  height: auto;    
 }
 
 .carousel__images {
-  width: 100%;       
-  height: auto;
-  display: block;
-  margin: 0;
-  padding: 0;
-  object-fit: contain;
+  width: 100%; 
+  object-fit: cover; 
 }
-
 .logo-w {
   width: 90%;
 }
